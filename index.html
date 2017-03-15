@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Simple JavaScript Test / Quiz Script</title>
+<link href="../demo.css" rel="stylesheet" type="text/css"/>
+</head>
+ 
+<body>
+    <h1>Simple JavaScript Test / Quiz Script </h1>
+    <form id="test">
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>Who was the first president of the Irish Republic? </td>
+            <td><input name="q1" type="text" id="q1" size="30" maxlength="30"/></td>
+        </tr>
+        <tr>
+            <td>There are 13 items in a baker's dozen. </td>
+            <td><input name="q2" type="radio" value="true"/>
+            True |
+            <input name="q2" type="radio" value="false"/>
+            False</td>
+        </tr>
+        <tr>
+            <td>What is the capital of Estonia? </td>
+            <td><input name="q3" type="radio" value="tallinn"/>
+            Tallinn |
+            <input name="q3" type="radio" value="riga"/>
+            Riga |
+            <input name="q3" type="radio" value="vilnius"/>
+            Vilnius |
+            <input name="q3" type="radio" value="warsaw"/>
+            Warsaw |
+            <input name="q3" type="radio" value="none"/>
+            None of these </td>
+        </tr>
+        <tr>
+            <td width="30%">Which of the following animals are typically found on an Irish farm? [Check all that apply] </td>
+            <td><input name="q4" type="checkbox" id="q4" value="pig"/>
+            Pig |
+            <input name="q4" type="checkbox" id="q4" value="elephant"/>
+            Elephant |
+            <input name="q4" type="checkbox" id="q4" value="cow"/>
+            Cow |
+            <input name="q4" type="checkbox" id="q4" value="kangaroo"/>
+            Kangaroo</td>
+        </tr>
+        <tr>
+            <td>The Nile River's estuary is located in what nation?</td>
+            <td><select name="q5" id="q5">
+            <option value="saudi arabia">Saudi Arabia</option>
+            <option value="england">England</option>
+            <option value="libya">Libya</option>
+            <option value="egypt">Egypt</option>
+            <option value="israel">Israel</option>
+            </select>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <input name="submit" type="button" onClick="gradeTest()" value="Grade This Test"/>
+    </form>
+
+    <p id="quizresult"></p>
+
+</body>
+<script src="js/quiz.js"></script>
+</html>
