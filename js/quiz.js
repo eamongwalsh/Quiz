@@ -16,6 +16,11 @@ function gradeTest() {
 	//iterate through all options in radio button list
 	//if checked value is true, answer is correct
 	var a2 = document.getElementsByName('q2');
+	
+	for(i = 0; i < a2.length; i++) {
+		console.log("a2[" + i + "] value "  + a2[i].value + " checked " + a2[i].checked);
+	}
+	
 	for(i = 0; i < a2.length; i++) {
 		if(a2[i].checked) {
 			if(a2[i].value == 'true') {
@@ -25,9 +30,16 @@ function gradeTest() {
 		}
 	}
 	
+	console.log("After a2, the score is " + correctAnswers);
+	
 	//iterate through all options in radio button list
 	//if checked value is tallinn, answer is correct
 	var a3 = document.getElementsByName('q3');
+	
+	for(i = 0; i < a3.length; i++) {
+		console.log("a3[" + i + "] value "  + a3[i].value + " checked " + a3[i].checked);
+	}
+	
 	for(i = 0; i < a3.length; i++) {
 		if(a3[i].checked) {
 			if(a3[i].value == 'tallinn') {
@@ -36,6 +48,9 @@ function gradeTest() {
 			}
 		}
 	}
+	
+	console.log("After a3, the score is " + correctAnswers);
+	
 	
 	//put correct answers in new array
 	//iterate through all options in check box list
@@ -77,7 +92,9 @@ function gradeTest() {
 		correctAnswers++;
 	}
 	
-	if(correctAnswers == totalQuestions) {
+	document.getElementById("quizresult").innerHTML = "Well student... your score is " + correctAnswers;
+	
+	/*if(correctAnswers == totalQuestions) {
 		alertText = "Congratulations! You got all the questions right!";
 		document.getElementById("quizresult").innerHTML = "Well student... " + alertText;
 	}
@@ -86,5 +103,5 @@ function gradeTest() {
 	}
 	alert(alertText);
 	printit = confirm("Would you like to print your transcript?!",'');
-	if (printit) window.print();
+	if (printit) window.print();*/
 }
