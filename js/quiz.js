@@ -1,3 +1,5 @@
+//Quiz with different elements
+
 function gradeTest() {
 	//global variables
 	var totalQuestions = 5;
